@@ -30,6 +30,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh "mvn test"
+		sh "this is coming from the feature branch 2"
              }
         }
     }
