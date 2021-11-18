@@ -26,7 +26,7 @@ pipeline {
         stage('Test'){
             steps{
                 echo "testing the environment"
-		echo "this is coming from the feture branch-1"
+		echo "this is coming from the feture branch-1 and updated"
              }
         }
     }
