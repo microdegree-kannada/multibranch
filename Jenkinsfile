@@ -19,20 +19,20 @@ pipeline {
         stage('compile and build'){
           
             steps{
-                sh "mvn clean install"
+                echo "building the enviroment"
                 sh 'echo "The environment variable is ${SERVICE_BRANCH}"'
                 }
             }
         stage('Test'){
             steps{
-                sh "mvn test"
+                echo "testing the environment"
 		echo "this is coming from the feture branch-1"
              }
         }
     }
     post { 
         always { 
-            junit '**/target/surefire-reports/TEST-com.microdegree.AppTest.xml'
+            echo "running this always"
         }
     }
 }
