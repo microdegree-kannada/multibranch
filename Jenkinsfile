@@ -26,7 +26,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh "mvn test"
-		sh "this is coming from the feture branch-1"
+		echo "this is coming from the feture branch-1"
              }
         }
     }
