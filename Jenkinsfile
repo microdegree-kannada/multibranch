@@ -17,11 +17,7 @@ pipeline {
                 }
             }
         stage('compile and build'){
-            when {
-	            expression {
-	            	return BRANCH == 'main';
-                              }
-                 }
+            
             steps{
                 sh "mvn clean install"
                 sh 'echo "The environment variable is ${SERVICE_BRANCH}"'
